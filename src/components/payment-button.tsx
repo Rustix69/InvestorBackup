@@ -23,7 +23,7 @@ interface PaymentButtonProps {
 }
 
 // API base URL - can be moved to an environment variable
-const API_BASE_URL = "http://localhost:3001/api/razorpay";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL + "/api/razorpay";
 
 const PaymentButton = ({ amount = 5000, planId, planName, className }: PaymentButtonProps) => {
   const { error, isLoading: isRazorpayLoading, Razorpay } = useRazorpay();

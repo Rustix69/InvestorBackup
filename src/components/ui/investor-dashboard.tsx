@@ -12,7 +12,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 // API endpoint
-const API_BASE_URL = "http://localhost:3001" // Update this to match your backend URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL // Update this to match your backend URL
 
 // Scramble Text Component
 const ScrambleText = ({ originalText, targetText, isScrambling, className = "" }) => {
